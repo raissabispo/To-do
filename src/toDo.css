@@ -1,0 +1,141 @@
+/* Estilização geral */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e2e2ff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+img {
+  width: 200px; /* Reduz a largura da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+}
+/* Container principal */
+.container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 4px 7px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+/* Título */
+.container h1 {
+  font-size: 1.5rem;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+/* Input */
+.container input {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+/* Botão Adicionar */
+.container button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Lista de tarefas */
+.tarefas {
+  margin-top: 20px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.item span {
+  font-size: 1rem;
+  color: #555555;
+}
+
+/* Botão Deletar (individual) */
+.item .delete {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+}
+
+.item .delete:hover {
+  background-color: #a71d2a;
+}
+
+/* Botão Deletar Todas */
+.container .delete {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 40%;
+}
+
+.container .delete:hover {
+  background-color: #a71d2a;
+}
+/* Para telas menores que 768px (celulares) */
+@media (max-width: 768px) {
+  .container {
+      padding: 10px;
+  }
+
+  input {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+
+  .item {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  button {
+    display: flex;
+      align-items: center ;
+      width: 100%;
+      margin-top: 5px;
+  }
+}
+
+/* Para telas menores que 480px (celulares pequenos) */
+@media (max-width: 480px) {
+  h1 {
+      font-size: 20px;
+      text-align: center;
+  }
+
+  button {
+      font-size: 14px;
+  }
+}
